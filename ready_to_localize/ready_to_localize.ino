@@ -66,7 +66,7 @@ void setup(){
   setAnchorsManual();
   // sets the positioning algorithm
   Pozyx.setPositionAlgorithm(algorithm, dimension, remote_id);
-  Pozyx.setRangingProtocol(POZYX_RANGE_PROTOCOL_FAST, remote_id);
+  //Pozyx.setRangingProtocol(POZYX_RANGE_PROTOCOL_FAST, remote_id);
   
 
   printCalibrationResult();
@@ -100,13 +100,13 @@ void printCoordinates(coordinates_t coor){
     network_id = 0;
   }
   if(!use_processing){
-    Serial.print("POS ID 0x");
-    Serial.print(network_id, HEX);
-    Serial.print(", x(mm): ");
+    /Serial.print("POS ID 0x");
+    /Serial.print(network_id, HEX);
+    /Serial.print(", x(mm): ");
     Serial.print(coor.x);
-    Serial.print(", y(mm): ");
+    Serial.print(" ");
     Serial.print(coor.y);
-    Serial.print(", z(mm): ");
+    Serial.print(" ");
     Serial.println(coor.z);
   }else{
     //Serial.print("POS,0x");
