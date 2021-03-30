@@ -17,7 +17,7 @@
 ////////////////// PARAMETERS //////////////////
 ////////////////////////////////////////////////
 
-uint16_t remote_id = 0x6000;                            // set this to the ID of the remote device
+uint16_t remote_id = 0x6015;                            // set this to the ID of the remote device
 bool remote = true;                                    // set this to true to use the remote ID
 
 boolean use_processing = false;                         // set this to true to output data for the processing sketch
@@ -100,9 +100,9 @@ void printCoordinates(coordinates_t coor){
     network_id = 0;
   }
   if(!use_processing){
-    /Serial.print("POS ID 0x");
-    /Serial.print(network_id, HEX);
-    /Serial.print(", x(mm): ");
+    //Serial.print("POS ID 0x");
+    //Serial.print(network_id, HEX);
+    //Serial.print(", x(mm): ");
     Serial.print(coor.x);
     Serial.print(" ");
     Serial.print(coor.y);
